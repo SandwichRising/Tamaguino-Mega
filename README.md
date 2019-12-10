@@ -1,3 +1,6 @@
+![](images_used/tamaguinoMega.jpg)
+
+
 /* ===================
  
   TAMAGUINO (MEGA VERSION)
