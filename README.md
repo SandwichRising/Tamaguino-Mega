@@ -28,10 +28,10 @@
   This version will not fit on an ATmega328P (Aduino UNO) and requires a chip with 48kb flash, 4kb of SRAM, and 64 bytes of EEPROM. I have been primarily using an ATmega1284, but other chips shoud work as well, such as Arduino Megas and hopefully ATmega4809's. The graphics library versions are important, especially when running an I2C screen, as newer libraries make the program work much slower than intended. If you use this, please send some feedback, I would be interested in hearing.
   
 New features with Mega version:
-*3 adult evolutions - One is randomly picked when your pet has been alive long enough (2 days currently).
-*EEPROM saving - No more losing your pet due to power out. Saves 4 times a day automatically plus a manual option.
-*Pet Names - Name your pet at the start of a new game.
-*Screen auto-dims (or not) after a set amount of time, saves battery, and timeout can be changed in settings (or disabled)
+ *3 adult evolutions - One is randomly picked when your pet has been alive long enough (2 days currently).
+ *EEPROM saving - No more losing your pet due to power out. Saves 4 times a day automatically plus a manual option.
+ *Pet Names - Name your pet at the start of a new game.
+ *Screen auto-dims (or not) after a set amount of time, saves battery, and timeout can be changed in settings (or disabled)
 *Battery Meter and Low Battery Detection - Needs power level detection adjusted for new types of batteries, currently has Samsung 18650's and 2-wire Protected LiPo Batter Packs added (tuned using a 1200mAh PL633450).
 *Stats reworked and go down at different rates based off pet age and if it's evolved or not. Doctor removed, cleaned area causes health to increase, poop causes gradual decrease.
 *Sounds in the program are easier to queue through a function to make tones or even songs when working in the program.
