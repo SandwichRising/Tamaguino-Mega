@@ -1,28 +1,28 @@
 /* ===================
- *
- * TAMAGUINO (MEGA VERSION)
- * v0.99 December 10th, 2019
- * https://github.com/SandwichRising/Tamaguino-Mega/
- *
- * Compiled using Arduino IDE 1.8.10 and MightyCore by MCUdude v2.0.3 board library (for ATmega1284 use)
- * 
- * Based entirely off jakob's tamaguino code @ https://alojzjakob.github.io/Tamaguino/
- *
- * This is still a WIP program, but far enough along to take a break
- * and have a complete-feeling project. I used .h extensions for support files, but that's probably not proper
- * 
- * Known Issue: there is (literally) junk art data added in to fix 
- * some sort of pointer-related issue with art frames. Removing the
- * junk art (with parts located in tamaguinoArt.cpp and .h and the evolve()
- * area in miscFunctions.cpp) causes one art frame to be distorted in the adult
- * evolutions, adding different amounts of junk art sets moves the frame distorted
- * around, adding the current amount moves it out of the real art 
- * arrays (apparently) and displays all art normally
- *
- * Uses Additional Libraries:
- * Adafruit_GFX (only version 1.1.5 due to I2C speed issues)
- * Adafruit_SSD1306 (only version 1.1.2 due to I2c speed issues)
- * Adafruit_SH1106 (unofficial, @ https://github.com/wonho-maker/Adafruit_SH1106)
+ 
+  TAMAGUINO (MEGA VERSION)
+  v0.99 December 10th, 2019
+  https://github.com/SandwichRising/Tamaguino-Mega/
+ 
+  Compiled using Arduino IDE 1.8.10 and MightyCore by MCUdude v2.0.3 board library (for ATmega1284 use)
+  
+  Based entirely off jakob's tamaguino code @ https://alojzjakob.github.io/Tamaguino/
+ 
+  This is still a WIP program, but far enough along to take a break
+  and have a complete-feeling project. I used .h extensions for support files, but that's probably not proper
+  
+  Known Issue: there is (literally) junk art data added in to fix 
+  some sort of pointer-related issue with art frames. Removing the
+  junk art (with parts located in tamaguinoArt.cpp and .h and the evolve()
+  area in miscFunctions.cpp) causes one art frame to be distorted in the adult
+  evolutions, adding different amounts of junk art sets moves the frame distorted
+  around, adding the current amount moves it out of the real art 
+  arrays (apparently) and displays all art normally
+ 
+  Uses Additional Libraries:
+  Adafruit_GFX (only version 1.1.5 due to I2C speed issues)
+  Adafruit_SSD1306 (only version 1.1.2 due to I2c speed issues)
+  Adafruit_SH1106 (unofficial, @ https://github.com/wonho-maker/Adafruit_SH1106)
   ==================== */
   
   This version will not fit on an ATmega328P (Aduino UNO) and requires a chip with 48kb flash, 4kb of SRAM, and 64 bytes of EEPROM. I have been primarily using an ATmega1284, but other chips shoud work as well, such as Arduino Megas and hopefully ATmega4809's. The graphics library versions are important, especially when running an I2C screen, as newer libraries make the program work much slower than intended. If you use this, please send some feedback, I would be interested in hearing.
