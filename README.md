@@ -12,15 +12,19 @@
   Based entirely off jakob's tamaguino code @ https://alojzjakob.github.io/Tamaguino/
  
   This is still a WIP program, but far enough along to take a break
-  and have a complete-feeling project. I used .h extensions for support files, but that's probably not proper
+  and have a complete-feeling project. I used .h extensions to create support files to make it easy to work with in Arduino IDE, 
+  I know it's not exactly c++ convention to stick everything into .h files like I did but it worked well for this project.
   
   Known Issue: there is (literally) junk art data added in to fix 
   some sort of pointer-related issue with art frames. Removing the
-  junk art (with parts located in tamaguinoArt.cpp and .h and the evolve()
-  area in miscFunctions.cpp) causes one art frame to be distorted in the adult
-  evolutions, adding different amounts of junk art sets moves the frame distorted
-  around, adding the current amount moves it out of the real art 
-  arrays (apparently) and displays all art normally
+  junk art (with parts located in tamaguinoArt.cpp, tamaguinoArt.h and the evolve()
+  function in miscFunctions.cpp) causes one art frame to be distorted in the adult
+  evolution animations. Adding different amounts of junk art frames and art sets moves the single 
+  distorted frame around, between the different adult skins and array locations. Adding the current
+  amount moves it out beyond the real art arrays (apparently) and displays all art normally.
+  
+  All the art assets used in the program are found in the images_used folder, with new adult dino skins also having a .cpp file with
+  the hex arrays.
  
   Uses Additional Libraries:
   Adafruit_GFX (only version 1.1.5 due to I2C speed issues)
